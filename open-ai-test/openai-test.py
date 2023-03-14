@@ -1,11 +1,13 @@
+# OPENAI Key
 from decouple import config
-
 OPEN_AI_API_KEY=config('OPENAI_API_KEY')
 
+# Bibs
 import os
 import openai
 openai.api_key=OPEN_AI_API_KEY
 
+# Hier anderes Model einbauen
 completion = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
   messages=[
@@ -16,4 +18,5 @@ completion = openai.ChatCompletion.create(
     ]
 )
 
+#Ausgabe
 print(completion)
